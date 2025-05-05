@@ -1,0 +1,144 @@
+
+body{
+    background-color: #9e9e9e;
+    color: aliceblue;
+    margin: 0;
+}
+
+a{
+    color: aliceblue;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0 ;
+    z-index: 100;
+    background-color: #3c3c3f;
+}
+
+.nav-container{
+    position: relative;
+    z-index: 300;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+    align-items: center;
+    padding-inline: 12px;
+    box-shadow: 0 2px 5px #3c3c3f;
+}
+
+.menu-mobile{
+    position: absolute; 
+    
+    right: 0;
+    left: 0;
+    top: -550%;
+    z-index: 50;
+
+    user-select: none;
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+    padding-block-start: var(--margin-1);
+
+    background-color: #2828ac;
+    box-shadow: var(--shadow);
+    transition: top 850ms ease;
+    box-shadow: 0 2px 5px #3c3c3f;
+
+}
+.visible{
+    user-select: initial;
+    pointer-events: initial;
+    top: 70px;
+}
+
+.menu-desktop{
+    
+    display: none;
+}
+
+.burger-menu{
+    background-color: #fff;
+}
+
+
+
+@media screen and (min-width: 768px){
+
+    .grid{
+        grid-template-columns: repeat(12,1fr);
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+    .hero-container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        min-height: 900px;
+        text-align: start;
+    }
+
+    .hero-img{
+        align-self: center;
+    }
+
+    .btn{
+        font-size: 20px;
+    }
+
+    .hero-text-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 550px;
+    }
+    .cta-container{
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .nav-container{
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+    
+    .menu-desktop{
+        display: flex;
+        gap: 32px;
+    }
+
+    .menu-mobile{
+        display: none;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .benefits-container > .wrapper{
+        flex-direction: row;
+    }
+
+    
+    .benefit-box{
+        text-align: start;
+    }
+
+    .icon-container{
+        margin-inline: 0;
+    }
+
+}
